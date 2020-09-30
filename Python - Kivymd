@@ -1,0 +1,21 @@
+from kivy.uix.screenmanager import Screen
+from kivymd.app import MDApp
+from kivy.lang import Builder
+from kivymd.uix.button import MDTextButton
+
+screen_helper = '''
+Screen:
+    MDTextButton:
+        text: 'Hacktober!!'
+        pos_hint: {'center_x':0.5,'center_y':0.5}
+
+
+'''
+class MainApp(MDApp):
+    def build(self):
+        base = Builder.load_string(screen_helper)
+        return base
+
+
+
+MainApp().run()
